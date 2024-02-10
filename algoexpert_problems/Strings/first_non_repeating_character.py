@@ -26,6 +26,3 @@ def first_non_repeating_character(string):
             return idx
     return -1
 
-string = "aaaaa"
-
-print(first_non_repeating_character(string))
