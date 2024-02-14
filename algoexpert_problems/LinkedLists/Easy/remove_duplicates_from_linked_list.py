@@ -33,10 +33,10 @@ def remove_duplicates_from_linked_list(LinkedList):
     return LinkedList
 
 
-
-# Define the LinkedList based on the provided JSON structure
+# This section is only for the test
+# Define the LinkedList
 head_node = LinkedList(1)
-nodes_data = [
+nodes = [
     {"id": "1-2", "next": "1-3", "value": 1},
     {"id": "1-3", "next": "2", "value": 1},
     {"id": "2", "next": "3", "value": 3},
@@ -50,12 +50,11 @@ nodes_data = [
 
 # Create the linked list based on the node data
 current_node = head_node
-for node_data in nodes_data:
+for node_data in nodes:
     new_node = LinkedList(node_data["value"])
     current_node.next = new_node
     current_node = new_node
 
-# Test the function by passing the head_node of the LinkedList
 result = remove_duplicates_from_linked_list(head_node)
 
 # Print the values of the resulting linked list to verify
